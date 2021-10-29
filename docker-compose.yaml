@@ -3,14 +3,14 @@ version: "3"
 services:
   db:
     image: postgres:11-alpine
-    container_name: pg-nest-boilerplate
+    container_name: nest-boilerplate-pg
     ports:
       - "5432:5432"
     environment:
-      POSTGRES_DB: ${DB_NAME:-nest-boilerplate}
+      POSTGRES_DB: ${DB_NAME:-nest_boilerplate}
       POSTGRES_USER: ${DB_USER:-postgres}
       POSTGRES_PASSWORD: ${DB_PASS:-secret}
     volumes:
-      - postgres_data:/var/lib/postgresql/data
+      - pg_data:/home/app/nest_boilerplate/data
 volumes:
-  postgres_data:
+  pg_data:
