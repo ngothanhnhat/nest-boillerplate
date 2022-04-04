@@ -1,7 +1,6 @@
-import { ConnectionOptions } from 'typeorm';
 import env from '../env';
 
-export const OrmConfig: ConnectionOptions = {
+export const OrmConfig = {
   type: env.db.type,
   host: env.db.host,
   port: env.db.port,
@@ -15,4 +14,4 @@ export const OrmConfig: ConnectionOptions = {
   synchronize: env.db.synchronize,
   logging: env.db.logging,
   logger: env.db.logger,
-} as ConnectionOptions;
+}
